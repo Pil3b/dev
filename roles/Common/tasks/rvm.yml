@@ -1,0 +1,6 @@
+---
+- name: Install RVM
+  shell: curl -L https://get.rvm.io | bash -s stable --autolibs=3 creates=~/.rvm
+
+- name: Set RVM to autoload
+  lineinfile: line='source $HOME/.rvm/scripts/rvm' state=present dest=~/.bash_profile

@@ -1,0 +1,6 @@
+---
+
+- name: Install Erlang
+  sudo: true
+  apt: update_cache=yes
+  apt: name=erlang state=present force=yes
